@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainEx4",
+            "request": "launch",
+            "mainClass": "testers.MainEx4",
+            "projectName": "Practica 4_94e2590c",
+            "args": "carrera2.txt"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainEx3",
+            "request": "launch",
+            "mainClass": "testers.MainEx3",
+            "projectName": "Practica 4_94e2590c",
+            "args": "carrera2.txt"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainEx2",
+            "request": "launch",
+            "mainClass": "testers.MainEx2",
+            "projectName": "Practica 4_94e2590c",
+            "args": "carrera.txt"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainEx1",
+            "request": "launch",
+            "mainClass": "testers.MainEx1",
+            "projectName": "Practica 4_94e2590c",
+            "args": "carrera.txt"
+        }
+    ]
+}

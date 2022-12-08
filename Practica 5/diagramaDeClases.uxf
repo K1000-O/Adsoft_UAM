@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1210</x>
+      <y>280</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>DataAggregator
+--
+- llaves : List&lt;String&gt;
+- values : List
+
+--
++ add(form : Map&lt;String, ?&gt;) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>560</y>
+      <w>390</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ProtectedForm
+--
+- form : Form
+- contrasenya : String
+- bloqueado : boolean
+- yaIntroducido : boolean
+- intentos : int
+
+--
++ protect(form : Form, contrasenya : String) : AbstractForm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>350</y>
+      <w>190</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/AbstractForm/
+--
+
+--
+exec() : Map</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>560</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Form
+--
+- formulario : Map
+
+--
++ add(texto : String, field : Field) : Form
++ exec() : Map</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>270</y>
+      <w>340</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Field
+--
+- funcion : Function
+- validaciones : Map
+
+--
++ addValidation(p : Predicate, texto : String) : Field
++ comprobarValidaciones(texto : String) : boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>420</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;190.0;90.0;190.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>420</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;90.0;10.0;90.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>100</x>
+      <y>200</y>
+      <w>1060</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>forms
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1180</x>
+      <y>230</y>
+      <w>330</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>processings
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>390</y>
+      <w>130</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0;110.0;230.0</additional_attributes>
+  </element>
+</diagram>

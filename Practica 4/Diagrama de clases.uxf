@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>91</y>
+      <w>189</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+/IVehicle/
+--
+ + getActualPosition(): double
+ + setActualPosition(newPositon : double)
+ + canMove(): boolean
+ + setCanMove(newMovement : boolean)
+ + getMaxSpeed(): double
+ + getName(): String
+ + addComponent(c : IComponent)
+ + getComponents(): List&lt;IComponent&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>833</x>
+      <y>245</y>
+      <w>175</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>/Vehiculo/
+--
+ - name : String
+ - id : int
+ - numCars : static int
+ - maxSpeed : double
+ - actualPosition : double
+ - canMove : boolean
+ 
+--
+ + actualizarPosicion()
+ + addComponent(c : IComponent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>434</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Truck
+--
+
+--
+ + actualizarPosicion()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>434</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Car
+--
+
+--
++ actualizarPosicion()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1015</x>
+      <y>434</y>
+      <w>161</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Motorcycle
+--
+
+--
++ addComponent(c : IComponent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1246</x>
+      <y>224</y>
+      <w>175</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Race
+--
+- longitud : int
+- vehiculos : List&lt;Vehiculo&gt;
+- turno : int
+- allowAttacks : boolean
+
+--
++ simulate()
+- algoritmoAtaque() : String
+- imprimirAtaques() : String
+- imprimirReparaciones() : String
+- imprimirVehiculos() : String
+- comprobarErrores()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1456</x>
+      <y>280</y>
+      <w>175</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>RaceReader
+--
+
+--
++ read(nombreFichero : String) : Race
+- inicializarMapVehiculos()
+- inicializarMapComponentes()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>77</y>
+      <w>140</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+/IComponent/
+--
++ isDamaged() : boolean
++ setDamaged(damage : boolean)
++ getName() : String
++ costRepair() : int
++ getVehicle() : IVehicle
++ isCritical() : boolean
++ repair()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>224</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>/Component/
+--
+- isDamaged : boolean
+- name : String
+- costRepair : int
+- isCritical : boolean
+- faseReparacion : int
+--
++ repair()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>273</x>
+      <y>371</y>
+      <w>91</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Engine
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>371</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Window
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>371</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Wheels
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>371</y>
+      <w>105</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>BananaDispenser
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>315</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>315</y>
+      <w>105</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;130.0;50.0;130.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>315</y>
+      <w>182</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;240.0;30.0;240.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>343</x>
+      <y>315</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;50.0;10.0;50.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>182</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>777</x>
+      <y>385</y>
+      <w>105</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>385</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>385</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;160.0;40.0;160.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>217</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1211</x>
+      <y>196</y>
+      <w>469</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>race
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>252</y>
+      <w>343</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+- listaComponentes
+m2=0..*</panel_attributes>
+    <additional_attributes>470.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>294</y>
+      <w>343</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+- vehiculo</panel_attributes>
+    <additional_attributes>470.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>728</x>
+      <y>35</y>
+      <w>469</w>
+      <h>483</h>
+    </coordinates>
+    <panel_attributes>vehiculos
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1001</x>
+      <y>308</y>
+      <w>259</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+- vehiculos
+m2=0..*</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>259</x>
+      <y>35</y>
+      <w>455</w>
+      <h>413</h>
+    </coordinates>
+    <panel_attributes>components
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>532</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; Interface &gt;&gt;
+IPowerUp
+--
++ applyPowerUp(v : IVehicle)
++ namePowerUp()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>658</y>
+      <w>224</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>/PowerUp/
+--
+- name : String
+
+--
++ appluPowerUp(v : IVehicle)
++ realizarAccion(vehiculos : List, v : IVehicle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>819</y>
+      <w>203</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AttackAll
+--
+
+--
++ realizarAccion(vehiculos : List, v : IVehicle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>819</y>
+      <w>217</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>SpeedUp
+--
+
+--
++ realizarAccion(vehiculos : List, v : IVehicle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>819</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Swap
+--
+
+--
++ realizarAccion(vehiculos : List, v : IVehicle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>749</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;210.0;70.0;210.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>749</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>259</x>
+      <y>749</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;220.0;70.0;10.0;70.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>588</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>77</x>
+      <y>504</y>
+      <w>840</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>powerUps
+--
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
